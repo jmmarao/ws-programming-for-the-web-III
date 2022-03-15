@@ -53,18 +53,7 @@ public class HelloServlet extends HttpServlet {
             out.println("<html><body>");
             out.println("<h1>Bem-vindo " + username + "</h1>");
             out.println("<h2>Essa página foi acessada " + count + " vezes</h2>");
-
-            out.println("<a href=\".\">Logout</a>");
-
-            session.invalidate();
-            out.println(username + " deslogado com sucesso!");
-//            try {
-//                response.wait(50);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//            out.println("alert(" + username + " deslogado com sucesso!)");
-//            out.println("</script>");
+            out.println("<a href=\"ServletLogout\">Logout</a>");
             out.println("</body></html>");
         }
         else {
@@ -74,10 +63,5 @@ public class HelloServlet extends HttpServlet {
             out.println("<a href=\".\">Voltar</a>");
             out.println("</body></html>");
         }
-    }
-
-    public void destroy(HttpSession session) {
-//        session.invalidate();
-//        response.sendRedirect("\".\"");
     }
 }
